@@ -20,6 +20,8 @@ import java.io.IOException;
 
 public class SimonSays extends KeyAdapter {
 
+	
+	
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
 	JFrame frame = new JFrame();
@@ -86,13 +88,28 @@ public class SimonSays extends KeyAdapter {
 		// 11. Add a key listener to the frame
 		frame.addKeyListener(this);
 		// 12. Create a new instance of Random
-		Random r = new Random();
 		
-		simonSays = r.nextBoolean();
+		int r;
+		
+		Random rand = new Random();
+		
+		r = rand.nextInt(2);
+		
+		System.out.println(r);
 		
 		// 13. Use the Random and the speak method to either say 
 		// "Simon says press this key" or "Press this key"
-		speak("");
+		if(r == 0) {
+		boolean simonSays = true;
+		}else {
+		boolean simonSays = false;
+		}
+		
+		if(simonSays) {
+			System.out.println("Simon says press this key");
+		} else {
+			System.out.println("Press this key");
+		}
 		// 14. Above, set the value of simonSays to true/false appropriately
 
 		
