@@ -118,7 +118,7 @@ public class SimonSays extends KeyAdapter {
 		// 14. Above, set the value of simonSays to true/false appropriately
 		if(r == 0) {
 		 simonSays = false;
-		}else {
+		}else if(r == 1) {
 		 simonSays = true;
 		}
 		
