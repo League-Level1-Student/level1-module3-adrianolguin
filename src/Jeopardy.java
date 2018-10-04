@@ -111,7 +111,10 @@ public class Jeopardy implements ActionListener {
 		// If the buttonPressed was the firstButton
 		if(buttonPressed.equals(firstButton)) {
 			askQuestion("how", "because", 100);
-		} 
+			firstButton.removeActionListener(this);
+		}  else if(buttonPressed.equals(secondButton)) {
+			askQuestion("why", "because", 200);
+		}
 			// Call the askQuestion() method
  
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
@@ -137,6 +140,7 @@ public class Jeopardy implements ActionListener {
 		if(input.equals(correctAnswer)) {
 			score = score + prizeMoney;
 			JOptionPane.showMessageDialog(null, "you were correct");
+			firstButton.setText("");
 		} else {
 			JOptionPane.showMessageDialog(null, "You were incorrect");
 		}
