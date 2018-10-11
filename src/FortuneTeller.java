@@ -59,7 +59,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    		 // 9. Find a spooky sound and put it in your default package (freesound.org)
    		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
    		 // 10. Play the sound
-   		 System.out.println("*ghost noise*);
+   		// System.out.println("*ghost noise*);
    		 // 11. Use the pause() method below to wait until your music has finished
 
    		 // 12. Insert your completed Magic 8 ball recipe (http://bit.ly/Zdrf6d) here
@@ -79,16 +79,6 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    		 e.printStackTrace();
    	 }
     }
-    
-    /**************** don't worry about the stuff under here *******************/
-    
-    BufferedImage fortuneTellerImage;
-
-    public static void main(String[] args) throws Exception {
-   	 SwingUtilities.invokeLater(new FortuneTeller());
-   	 begin();
-    }
-
     public class Magic8Ball {
 
         // 1. Make a main method that includes all the steps below….
@@ -96,7 +86,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
         // 2. Make a variable that will hold a random number and put a random number into this variable using "new Random().nextInt(4)"
         int r = new Random().nextInt(4);
         // 3. Print out this variable
-        System.out.println();
+      //  System.out.println(r)
         // 4. Get the user to enter a question for the 8 ball
 
         // 5. If the random number is 0
@@ -116,6 +106,17 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
         // -- write your own answer
 
     }
+    
+    /**************** don't worry about the stuff under here *******************/
+    
+    BufferedImage fortuneTellerImage;
+
+    public static void main(String[] args) throws Exception {
+   	 SwingUtilities.invokeLater(new FortuneTeller());
+   	 begin();
+    }
+
+   
 
 
     
