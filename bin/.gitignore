@@ -1,8 +1,3 @@
-/BookOfIllusions.class
-/CowTimer.class
-/FortuneTeller.class
-/Jeopardy.class
-/Movie.class
 /Recipes.html
 /creepy-noise.wav
 /down.jpg
@@ -14,7 +9,14 @@
 /moo.wav
 /right.jpg
 /up.jpg
+/BookOfIllusions.class
+/CowTimer.class
+/FortuneTeller.class
+/Jeopardy.class
+/Movie.class
 /NetflixQueue.class
 /SimonSays.class
 /randomPractive.class
 /randomTest.class
+/FortuneTeller$Magic8Ball.class
+/Magic8Ball.class

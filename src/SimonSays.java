@@ -50,23 +50,41 @@ public class SimonSays extends KeyAdapter {
 		// 15. Make a points variable to track the score.
 		int points = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-		if(e.getKeyCode() == imageIndex && simonSays) {
+		if(simonSays && e.getKeyCode() == imageIndex) {
+			points++;
+			JOptionPane.showMessageDialog(null, "You were correct");
+			tries++;
+			showImage();
+		}else if(!simonSays && e.getKeyCode() == imageIndex) {
+			points--;
+			JOptionPane.showMessageDialog(null, "You were incorrect");
+			tries++;
+			showImage();
+		}else if(simonSays && e.getKeyCode() != imageIndex) {
+			points--;
+			JOptionPane.showMessageDialog(null,"you were incorrect");
+			tries++;
+			showImage();
+		}else if(!simonSays && e.getKeyCode() != imageIndex){
+			points++;
+			JOptionPane.showMessageDialog(null, "You were correct");
+			tries++;
+		showImage();	
+		}
 			// 17. Increase the value of score
-		points++;
+		
 			// 18. Use the speak method to tell the user they were correct
-		System.out.println("you were correct");
+		
 		//speak("you were correct");
-		tries++;
+		
+		
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't say..."
-		}else if(e.getKeyCode() != imageIndex && !simonSays) {
 			// 20.  Increase the value of score
-		points++;
+		//points;
 			// 21. Use the speak method to tell the user they were correct
-		System.out.println("you were correct");
 		//speak("you were correct");
 		// 22. Increment tries by 1
-		tries++;
-		}
+		
 		// 25. If tries is greater than 9 (or however many you want)...
 		if(tries > 5) {
 			// 26. Tell the user their score
@@ -80,6 +98,7 @@ public class SimonSays extends KeyAdapter {
 		}
 	}
 
+	
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
 		frame = new JFrame();
@@ -108,17 +127,17 @@ public class SimonSays extends KeyAdapter {
 		// 13. Use the Random and the speak method to either say 
 		// "Simon says press this key" or "Press this key"
 		if(r == 0) {
-			System.out.println(("Simon says press this key"));
+			System.out.println(("Press this key"));
 			//speak("Simon says press this key");
 		} else {
-			System.out.println("Press this key");
+			System.out.println("Simon says press this key");
 			//speak("Press this key");
 		}
 		
 		// 14. Above, set the value of simonSays to true/false appropriately
 		if(r == 0) {
 		 simonSays = false;
-		}else if(r == 1) {
+		}else {
 		 simonSays = true;
 		}
 		
