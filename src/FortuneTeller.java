@@ -23,8 +23,8 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     JFrame frame = new JFrame();
 
-    int frameWidth = 1000;
-    int frameHeight = 1000;
+    int frameWidth = 500;
+    int frameHeight = 450;
 
     FortuneTeller() throws Exception {
    	 // 1. Choose an image for your fortune teller and put it in your default package
