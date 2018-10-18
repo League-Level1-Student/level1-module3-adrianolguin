@@ -11,12 +11,14 @@
 /up.jpg
 /BookOfIllusions.class
 /CowTimer.class
+/FortuneTeller$Magic8Ball.class
 /FortuneTeller.class
 /Jeopardy.class
+/Magic8Ball.class
 /Movie.class
 /NetflixQueue.class
 /SimonSays.class
 /randomPractive.class
 /randomTest.class
-/FortuneTeller$Magic8Ball.class
-/Magic8Ball.class
+/cowTimer.class
+/cowTimerTest.class

@@ -71,7 +71,7 @@ String img2 = "left.jpg";
 		// 14. pack the frame
 		frame.pack();
 		
-		//int[] values;
+	
 	    
 		
 	}

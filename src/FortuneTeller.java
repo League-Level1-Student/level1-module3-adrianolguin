@@ -23,8 +23,8 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     JFrame frame = new JFrame();
 
-    int frameWidth = 500;
-    int frameHeight = 400;
+    int frameWidth = 1000;
+    int frameHeight = 1000;
 
     FortuneTeller() throws Exception {
    	 // 1. Choose an image for your fortune teller and put it in your default package
@@ -37,7 +37,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     static void begin() {
    	 // 3. Welcome the user. Give them a hint for the secret location.
-    	JOptionPane.showMessageDialog(null, "welcom use. Hint");
+    	JOptionPane.showMessageDialog(null, "welcome user. Hint");
 
     }
 
@@ -53,22 +53,43 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 int secretLocationX = 2;
    	 int secretLocationY = 2;
    	 /** If the mouse co-ordinates and secret location are close, we'll let them ask a question. */
-   	 if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
+   	 if (areClose(mouseX, frameWidth/2) && areClose(mouseY, frameHeight/2)) {
    		 // 8. Get the user to enter a question for the fortune teller
    		 String input = JOptionPane.showInputDialog("question");
    		 // 9. Find a spooky sound and put it in your default package (freesound.org)
    		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
    		 // 10. Play the sound
-   		// System.out.println("*ghost noise*);
+   		 System.out.println("*ghost noise*");
    		 // 11. Use the pause() method below to wait until your music has finished
 
    		 // 12. Insert your completed Magic 8 ball recipe (http://bit.ly/Zdrf6d) here
-
+   		
+   		
+   		 
+   		 
+   		 
+   		 
    	 }
 
     }
 
-    private boolean areClose(int mouseX, int secretLocationX) {
+    private void magic8Ball() {
+		int r = new Random().nextInt(4);
+		JOptionPane.showInputDialog("Ask a question to the magic 8 Ball!");
+
+		if (r == 0) {
+			System.out.println("Yes");
+		} else if (r == 1) {
+			System.out.println("No");
+		} else if (r == 2) {
+			System.out.println("Maybe you should ask google?");
+		} else {
+			System.out.println("Maybe in a million years");
+		}
+		
+	}
+
+	private boolean areClose(int mouseX, int secretLocationX) {
    	 return mouseX < secretLocationX + 15 && mouseX > secretLocationX - 15;
     }
 
@@ -78,33 +99,6 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 } catch (InterruptedException e) {
    		 e.printStackTrace();
    	 }
-    }
-    public class Magic8Ball {
-
-        // 1. Make a main method that includes all the steps below….
-
-        // 2. Make a variable that will hold a random number and put a random number into this variable using "new Random().nextInt(4)"
-        int r = new Random().nextInt(4);
-        // 3. Print out this variable
-      //  System.out.println(r)
-        // 4. Get the user to enter a question for the 8 ball
-
-        // 5. If the random number is 0
-
-        // -- tell the user "Yes"
-
-        // 6. If the random number is 1
-
-        // -- tell the user "No"
-
-        // 7. If the random number is 2
-
-        // -- tell the user "Maybe you should ask Google?"
-
-        // 8. If the random number is 3
-
-        // -- write your own answer
-
     }
     
     /**************** don't worry about the stuff under here *******************/
