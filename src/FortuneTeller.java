@@ -55,7 +55,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 /** If the mouse co-ordinates and secret location are close, we'll let them ask a question. */
    	 if (areClose(mouseX, frameWidth/2) && areClose(mouseY, frameHeight/2)) {
    		 // 8. Get the user to enter a question for the fortune teller
-   		 String input = JOptionPane.showInputDialog("question");
+   		 JOptionPane.showInputDialog("question");
    		 // 9. Find a spooky sound and put it in your default package (freesound.org)
    		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
    		 // 10. Play the sound
