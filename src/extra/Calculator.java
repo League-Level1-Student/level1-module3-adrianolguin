@@ -18,8 +18,11 @@ public class Calculator {
 	void add(String string, String string2) {
 		int x = Integer.parseInt(string);
 		int y = Integer.parseInt(string2);
-		int c = x*y;
+		String c = ""+x*y;
+		
+		
 		System.out.println(c);
+		
 	}
 	
 	void sub(int a, int b) {
