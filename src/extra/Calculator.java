@@ -1,41 +1,31 @@
 package extra;
 
-
 public class Calculator {
 
-	void mult(String a, String b) {
-		int x = Integer.parseInt(a);
-		int y = Integer.parseInt(b);
-		int c = x*y;
-		System.out.println(c);
+	int mult(int a, int b) {
+		int c = a*b;
+		return c;
 	}
-	
-	void div(int a, int b){
+
+	int div(int a, int b) {
 		int c = a/b;
-		System.out.println(c);
+		return c;
 	}
+
+	int add(int a, int b) {
+		int c = a + b;
+		return c;
+		
 	
-	void add(String string, String string2) {
-		int x = Integer.parseInt(string);
-		int y = Integer.parseInt(string2);
-		String c = ""+x*y;
-		
-		
-		System.out.println(c);
-		
 	}
-	
-	void sub(int a, int b) {
+
+	int sub(int a, int b) {
 		int c = a - b;
-		System.out.println(c);
+		return c;
 	}
-	
-	
-	Calculator(){
-		
+
+	Calculator() {
+
 	}
-	
-	
-	
-	
+
 }

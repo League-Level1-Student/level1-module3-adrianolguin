@@ -1,4 +1,5 @@
 package extra;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,6 +20,8 @@ public class CalculatorRunner implements ActionListener {
 	
 	JTextField field1 = new JTextField(15);
 	JTextField field2 = new JTextField(15);
+	int wx = 375;
+	int wy = 200;
 	
 	public static void main(String[] args) {
 		
@@ -31,14 +34,19 @@ public class CalculatorRunner implements ActionListener {
 	
 	
 	
+	
 	}
 	
 	void createUI() {
 		JFrame frame = new JFrame();
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setPreferredSize(new Dimension(wx,wy));
 		
 		JPanel panel = new JPanel();
+		
+		panel.setPreferredSize(new Dimension(wx,wy));
+	
 		
 		panel.add(field1);
 		panel.add(field2);
@@ -49,6 +57,7 @@ public class CalculatorRunner implements ActionListener {
 		panel.add(label);
 		
 		frame.add(panel);
+			frame.pack();
 		
 		button1.addActionListener(this);
 		button2.addActionListener(this);
@@ -60,19 +69,27 @@ public class CalculatorRunner implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		String a = field1.getText();
-		String b = field2.getText();
+		String num1 = field1.getText();
+		String num2 = field2.getText();
+		int a = Integer.parseInt(num1);
+		int b = Integer.parseInt(num2);
 		
 		Calculator cal = new Calculator();
 		JButton buttonPressed = (JButton) e.getSource();
 		
 		if(buttonPressed.equals(button1)) {
-			
-			
-			//label.setText(cal.add(g,b);
-		}
-		
+			int c = cal.add(a, b);
+			label.setText("" + c);
+		} else if(buttonPressed.equals(button2)) {
+			int c = cal.sub(a, b);
+			label.setText("" + c);
+		} else if(buttonPressed.equals(button3)) {
+			int c = cal.mult(a, b);
+			label.setText("" + c);
+		} else if(buttonPressed.equals(button4)) {
+			int c = cal.div(a, b);
+			label.setText("" + c);
+		} 
 	}
-	
 }
 
