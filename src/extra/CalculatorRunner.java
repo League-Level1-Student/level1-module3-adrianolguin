@@ -29,12 +29,6 @@ public class CalculatorRunner implements ActionListener {
 	CalculatorRunner calc = new CalculatorRunner();
 	calc.createUI();
 	
-	
-	
-	
-	
-	
-	
 	}
 	
 	void createUI() {
